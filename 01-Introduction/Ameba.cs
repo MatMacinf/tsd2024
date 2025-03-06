@@ -8,10 +8,19 @@ using System.Text.RegularExpressions;
 
 public class Ameba
 {
-	public int simulate(int[] X, int A)
-	{
-	    return default(int);
-	}
+    public int simulate(int[] X, int A)
+        {
+            int size = A;
+            int rows = X.Length;
+
+            for( int i=0; i < rows; i++)
+            {
+                if(X[i] == size )
+                { size = size+X[i];}
+                        
+            }                    
+            return size;
+        }
 
 	#region Testing code
 	[STAThread]
