@@ -8,10 +8,22 @@ using System.Text.RegularExpressions;
 
 public class Alarms
 {
-	public int countAlarms(int[] volume, int S)
-	{
-        return default(int);
-	}
+    public int countAlarms(int[] volume, int S)
+        {        
+            int sleepnes = S;
+            int alarms = 0;
+            int vol;
+
+            while( sleepnes > 0 )
+            {        
+                int order = i % (volume.Length);
+                Console.Write(order);
+                vol = volume[order];
+                sleepnes = sleepnes - vol;
+                alarms++;
+            }        
+            return alarms;
+        }
 
 	#region Testing code
 	[STAThread]
