@@ -86,5 +86,21 @@ class Program
         
         Console.WriteLine("\nGold Analyis Queries with LINQ Completed.");
 
+        Console.WriteLine("----------Task2----------");
+        Satisfactory<int> Task2 = new Satisfactory<int>();
+        int year = 2024;
+        int year_2 = 2023;
+        Console.WriteLine($"Is {year} a leap year? - {Task2.isLeapYear(year)}");
+        Console.WriteLine($"Is {year_2} a leap year? - {Task2.isLeapYear(year_2)}");
+        Console.WriteLine($"List is empty: {Task2.IsEmpty()}");
+        Task2.Add(10);
+        Task2.Add(20);
+        Task2.Add(30);
+        Task2.Add(40);
+        Console.WriteLine("Added elements to List");
+        Console.WriteLine($"List is empty: {Task2.IsEmpty()}");
+        Console.WriteLine($"Random element up to index 2: {Task2.Get(2)}");
+        Console.WriteLine($"Random element up to index 3: {Task2.Get(3)}");
+
     }
 }
